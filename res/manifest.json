@@ -1,0 +1,34 @@
+{
+    "name": "Canvas to Moodle",
+	"description": "Simplifying your life, with just a simple install.",
+    "version": "1.6.2",
+	"manifest_version": 2,
+	"icons" : {
+            "128": "128v2.png"
+        },
+    "options_page" : "options.html",
+    "content_scripts": [
+        {
+            "matches":[
+                "https://*.instructure.com/",
+                "https://lms.neumont.edu/"
+            ],
+            "js":[
+                "jquery.min.js", 
+                "jquery-ui.min.js",
+                "underscore-min.js",
+                "moment.min.js",
+                "clndr-1.0.7.min.js",
+                "contentscript.js"
+            ]
+        }
+    ],
+    "permissions":[
+        "https://*.instructure.com/api/*",
+        "https://lms.neumont.edu/api/*",
+        "storage"
+    ],
+    "web_accessible_resources":[
+        "contentscript.js.map"
+    ]
+}
